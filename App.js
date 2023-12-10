@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
 import MainNavigator from './navigators/MainNavigator';
-import TabNavigator from './navigators/TabNavigation';
 
 export default function App() {
   return (
-      <TabNavigator />
+      <MainNavigator />
   );
 }
 

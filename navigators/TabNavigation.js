@@ -13,8 +13,7 @@ const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
-      <NavigationContainer>
+
         <Tab.Navigator initialRouteName="Today">
           <Tab.Screen
             name="Today"
@@ -65,8 +64,6 @@ const TabNavigator = () => {
             }}
           />
         </Tab.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
   );
 };
 

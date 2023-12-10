@@ -3,6 +3,7 @@ import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import AddTask from '../components/AddTask';
 import AddWorkout from '../components/AddWorkout';
+import AddMeal from '../components/AddMeal';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -11,6 +12,7 @@ const AddScreen = () => {
     <Tab.Navigator>
       <Tab.Screen name="Create Task" component={AddTask} />
       <Tab.Screen name="Create Workout" component={AddWorkout} />
+      <Tab.Screen name="Create Meal" component={AddMeal} />
       {/* Add additional tabs as needed */}
     </Tab.Navigator>
   );

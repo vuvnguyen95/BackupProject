@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "../screens/LoginScreen";
-import HomeScreen from "../screens/HomeScreen";
+import TabNavigator from "./TabNavigation";
 import RegisterScreen from "../screens/RegisterScreen";
 import BiometricScreen from "../screens/BiometricScreen";
 import ConfirmationScreen from "../screens/ConfirmationScreen";
@@ -36,7 +36,7 @@ function MainNavigator() {
         />
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={TabNavigator}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
