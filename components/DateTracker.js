@@ -1,7 +1,16 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import SettingsScreen from '../screens/SettingsScreen';
 
-const DateTracker = ({ month, year, onAccountPress }) => {
+const DateTracker = ({ month, year }) => {
+  const navigation = useNavigation();
+
+  const onAccountPress = () => {
+    navigation.navigate('SettingsStack', { screen: 'SelectProfile', params: { section: 'Profile' } });
+  };
+
   return (
     <View style={styles.dateTrackerContainer}>
       <Text style={styles.monthYearText}>{`${month} ${year}`}</Text>
@@ -11,6 +20,16 @@ const DateTracker = ({ month, year, onAccountPress }) => {
     </View>
   );
 };
+
+const Stack = createStackNavigator();
+
+export function settingsStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
+    </Stack.Navigator>
+  );
+}
 
 const styles = StyleSheet.create({
   dateTrackerContainer: {
@@ -23,10 +42,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   accountButton: {
-    // Style your account button
+    
   },
   accountButtonText: {
-    // Style your account button text
+    
   },
 });
 export default DateTracker;

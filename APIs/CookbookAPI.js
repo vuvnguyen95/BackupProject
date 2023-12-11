@@ -32,6 +32,7 @@ const CookbookAPI = () => {
   renderItem={({ item }) => (
     <View>
       <Text>{item.title}</Text>
+      <Text>{item.servings}</Text>
     </View>
   )}
 />

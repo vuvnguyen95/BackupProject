@@ -7,6 +7,7 @@ import TabNavigator from "./TabNavigation";
 import RegisterScreen from "../screens/RegisterScreen";
 import BiometricScreen from "../screens/BiometricScreen";
 import ConfirmationScreen from "../screens/ConfirmationScreen";
+import DateTracker from "../components/DateTracker";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,11 @@ function MainNavigator() {
         <Stack.Screen
           name="Home"
           component={TabNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SettingsStack"
+          component={DateTracker}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
