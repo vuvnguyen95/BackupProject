@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet, } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const DateTracker = ({ month, year }) => {
+
+const AccountButton = ({navigation}) => {
+  const onAccountPress = () => {
+    navigation.navigate("Setting");
+  };
+
   return (
     <View style={styles.dateTrackerContainer}>
-      <Text style={styles.monthYearText}>{`${month} ${year}`}</Text>
+      <TouchableOpacity onPress={onAccountPress} style={styles.accountButton}>
+        <Text style={styles.accountButtonText}>👤</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -26,4 +33,4 @@ const styles = StyleSheet.create({
     
   },
 });
-export default DateTracker;
+export default AccountButton;
