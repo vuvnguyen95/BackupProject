@@ -7,6 +7,7 @@ import TabNavigator from "./TabNavigation";
 import RegisterScreen from "../screens/RegisterScreen";
 import BiometricScreen from "../screens/BiometricScreen";
 import ConfirmationScreen from "../screens/ConfirmationScreen";
+import SettingsScreen from "../screens/SettingsScreen";
 
 const Stack = createNativeStackNavigator();
 

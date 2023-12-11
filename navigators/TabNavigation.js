@@ -7,6 +7,7 @@ import AddScreen from "../screens/AddScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import WorkoutScreen from "../screens/WorkoutScreen";
 import CookbookScreen from "../screens/CookbookScreen";
+import SettingsScreen from "../screens/SettingsScreen";
 import { View, SafeAreaView } from "react-native";
 
 const Tab = createBottomTabNavigator();
