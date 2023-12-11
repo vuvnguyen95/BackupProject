@@ -41,7 +41,7 @@ function MainNavigator() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="SettingsStack"
+          name="Settings"
           component={SettingsScreen}
           options={{ headerShown: false }}
         />

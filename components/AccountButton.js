@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const AccountButton = ({navigation}) => {
   const onAccountPress = () => {
-    navigation.navigate("Setting");
+    navigation.navigate("Settings");
   };
 
   return (
