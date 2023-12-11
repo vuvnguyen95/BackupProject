@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Modal, Alert, Pressable, Button } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { useNavigation } from '@react-navigation/core';
 import styles from '../styles/settingsStyles';
 
 function SelectProfile() {
+  const navigation = useNavigation();
   const [isModalVisible, setModalVisible] = useState(false);
   const [address, setAddress] = useState('123 Main Street\nColumbia, South Carolina\n29201');
   const [mobile, setMobile] = useState('(123) 456-7890');
@@ -24,6 +26,10 @@ function SelectProfile() {
 
   return (
     <View style={{ flex: 1, flexDirection: 'column', padding: 20 }}>
+      <Pressable onPress={() => navigation.goBack()}>
+        <Text style={{ fontSize: 18, marginBottom: 10 }}>Back</Text>
+      </Pressable>
+      
       <Text style={styles.title}>Profile</Text>
       <Text style={styles.profileID}>User ID: U124350622456</Text>
 
@@ -88,8 +94,13 @@ function SelectProfile() {
 }
 
 function SelectAccount() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
+      <Pressable onPress={() => navigation.goBack()}>
+        <Text style={{ fontSize: 18, marginBottom: 10 }}>Back</Text>
+      </Pressable>
+
       <Text style={styles.title}>Account</Text>
       <Text style={styles.profileID}>User ID: U124350622456</Text>
       <View style={styles.rowContainer}>
@@ -116,8 +127,13 @@ function SelectAccount() {
 }
 
 function SelectOthers() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
+
+      <Pressable onPress={() => navigation.goBack()}>
+        <Text style={{ fontSize: 18, marginBottom: 10 }}>Back</Text>
+      </Pressable>
       <Text style={styles.title}>Other Settings</Text>
       <Text style={styles.profileID}>User ID: U124350622456</Text>
       <View style={styles.rowContainer}>
